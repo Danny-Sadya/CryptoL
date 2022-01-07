@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/jquery.tablesorter.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tabulator/5.0.7/js/tabulator.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+<script src="https://momentjs.com/downloads/moment-timezone-with-data-1970-2030.js"></script>
+<link rel="stylesheet" href="{% static 'CSS/balloon.min.css' %}">
+<link href="{% static 'CSS/font-awesome.css' %}" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'CSS/style.css' %}">
+{#<script src="index.js"></script>#}
+<title>NFT Loaded Lions</title>
+<link rel="stylesheet" href="{% static 'CSS/tabulator_midnight.min.css' %}">
+</head>
+<body class="dark">
+<div id="header"></div>
+    <h1>
+        <div class="site-container">
+            <div class="site-name">NFT Loaded Lion</div>
+        </div>
+    </h1>
+    <img class="lion_bg" src="media/background_lion.jpg" width="100%">
+<div id="menu" class="box" style="height: auto;">
+    <h2>Menu</h2>
+    <div id="menucontent">
+        <div id="menu-table" class="tabulator" role="grid" tabulator-layout="fitColumns" style="min-height: 0px;">
+          <div class="tabulator-header" role="rowgroup" style="padding-right: 0px; margin-left: 0px;">
+              <div class="tabulator-headers" role="row" style="margin-left: 0px;"><div class="tabulator-col tabulator-sortable" role="columnheader" aria-sort="none" tabulator-field="name" title="" style="min-width: 40px; width: 182px; height: 32px;"><div class="tabulator-col-content"><div class="tabulator-col-title-holder"><div class="tabulator-col-title" style="text-align: center;">Lion number</div><div class="tabulator-col-sorter"><div class="tabulator-arrow"></div></div></div></div><div class="tabulator-col-resize-handle"></div><div class="tabulator-col-resize-handle prev"></div></div><div class="tabulator-col tabulator-sortable" role="columnheader" aria-sort="none" tabulator-field="displayName" title="" style="min-width: 40px; width: 182px; height: 32px;"><div class="tabulator-col-content"><div class="tabulator-col-title-holder"><div class="tabulator-col-title" style="text-align: center;">Price</div><div class="tabulator-col-sorter"><div class="tabulator-arrow"></div></div></div></div><div class="tabulator-col-resize-handle"></div><div class="tabulator-col-resize-handle prev"></div></div><div class="tabulator-col tabulator-sortable" role="columnheader" aria-sort="none" tabulator-field="startAt" title="" style="min-width: 40px; width: 182px; height: 32px;"><div class="tabulator-col-content"><div class="tabulator-col-title-holder"><div class="tabulator-col-title" style="text-align: center;">Purchase Type</div><div class="tabulator-col-sorter"><div class="tabulator-arrow"></div></div></div></div><div class="tabulator-col-resize-handle"></div><div class="tabulator-col-resize-handle prev"></div></div><div class="tabulator-col tabulator-sortable" role="columnheader" aria-sort="none" tabulator-field="endAt" title="" style="min-width: 40px; width: 182px; height: 32px;"><div class="tabulator-col-content"><div class="tabulator-col-title-holder"><div class="tabulator-col-title" style="text-align: center;">Rarity</div><div class="tabulator-col-sorter"><div class="tabulator-arrow"></div></div></div></div><div class="tabulator-col-resize-handle"></div><div class="tabulator-col-resize-handle prev"></div></div></div><div class="tabulator-frozen-rows-holder"></div></div>
+            <div class="tabulator-footer">
+                <input type="text" onkeyup="filterMenuTable(this)" placeholder="Search...">
+                    <span class="tabulator-paginator"><button class="tabulator-page" type="button" role="button" aria-label="First Page" title="First Page" data-page="first" disabled="">First</button>
+                        <button class="tabulator-page" type="button" role="button" aria-label="Prev Page" title="Prev Page" data-page="prev" disabled="">Prev</button>
+                        <span class="tabulator-pages"><button class="tabulator-page active" type="button" role="button" aria-label="Show Page 1" title="Show Page 1" data-page="1">1</button>
+                            <button class="tabulator-page" type="button" role="button" aria-label="Show Page 2" title="Show Page 2" data-page="2">2</button>
+                            <button class="tabulator-page" type="button" role="button" aria-label="Show Page 3" title="Show Page 3" data-page="3">3</button><button class="tabulator-page" type="button" role="button" aria-label="Show Page 4" title="Show Page 4" data-page="4">4</button><button class="tabulator-page" type="button" role="button" aria-label="Show Page 5" title="Show Page 5" data-page="5">5</button></span><button class="tabulator-page" type="button" role="button" aria-label="Next Page" title="Next Page" data-page="next">Next</button><button class="tabulator-page" type="button" role="button" aria-label="Last Page" title="Last Page" data-page="last">Last</button></span></div>
+        </div>
+    </div>
+</div>
+<div id="output"></div>
+<div id="footer"></div>
+</body>
+</html>

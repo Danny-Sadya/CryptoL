@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<script type="text/javascript" async="" src="https://ssl.google-analytics.com/ga.js"></script><script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/jquery.tablesorter.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tabulator/5.0.7/js/tabulator.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+<script src="https://momentjs.com/downloads/moment-timezone-with-data-1970-2030.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/balloon-css/balloon.min.css">
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="index.js"></script><captcha-widgets></captcha-widgets>
+<title>NFT Resale Tracker</title>
+<link rel="stylesheet" href="/tabulator_midnight.min.css"></head>
+<body class="dark">
+<div id="header"><div class="whale" onclick="navURL('whale')"><img src="whale.png"></div>
+<div class="asset" onclick="navURL('asset')"><img src="hashtag.png"></div>
+<h1>
+<div class="site-container">
+<div class="site-name" onclick="navURL('index')">NFT Resale Tracker</div>
+<div class="icon-moon" onclick="toggle()"></div>
+</div>
+</h1>
+<a class="rocket" onclick="navURL('referral')"><img src="launch.png"></a>
+<script>
+
+var baseURL = "";//  "http://localhost:32695";
+
+
+var browser = "Other";
+var ua = navigator.userAgent;
+
+if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|mobile|CriOS/i.test(ua))
+    browser = "Mobile";
+else if(/Firefox/i.test(ua))
+    browser = "Firefox";
+else if(/Chrome/i.test(ua))
+    browser = "ChromeOSX";
+
+
+function openURL(input){
+   window.open(input);
+}
+
+function navURL(input, key = "NA", value = "NA"){
+
+  if (input === 'index'){
+    window.location = window.location.origin + '\?theme=' + theme;
+  }else{
+    if(key === "NA" || value === "NA"){
+     window.open('/' + input + '.html?theme=' + theme);
+    }else{
+     window.open('/' + input + '.html?' + key + '=' + value + '&theme=' + theme);
+    }
+  }
+
+}
+
+function toggle(){
+  var target;
+
+  if(document.body.className === 'light'){
+   target = '?theme=dark';
+  }else{
+   target = '?theme=light';
+  }
+
+  window.location = window.location.pathname + target;
+}
+
+</script>
+</div>
+<div id="menu" class="box"><h2>Menu <i id="tcaret" class="icon-caret-down"></i></h2><div id="menucontent"><div id="menu-table" class="tabulator" role="grid" tabulator-layout="fitColumns" style="min-height: 388.8px;"><div class="tabulator-header" role="rowgroup" style="padding-right: 0px; margin-left: 0px;"><div class="tabulator-headers" role="row" style="margin-left: 0px;"><div class="tabulator-col tabulator-sortable" role="columnheader" aria-sort="none" tabulator-field="name" title="" style="min-width: 40px; width: 182px; height: 32px;"><div class="tabulator-col-content"><div class="tabulator-col-title-holder"><div class="tabulator-col-title" style="text-align: center;">Drop</div><div class="tabulator-col-sorter"><div class="tabulator-arrow"></div></div></div></div><div class="tabulator-col-resize-handle"></div><div class="tabulator-col-resize-handle prev"></div></div><div class="tabulator-col tabulator-sortable" role="columnheader" aria-sort="none" tabulator-field="displayName" title="" style="min-width: 40px; width: 182px; height: 32px;"><div class="tabulator-col-content"><div class="tabulator-col-title-holder"><div class="tabulator-col-title" style="text-align: center;">Creator</div><div class="tabulator-col-sorter"><div class="tabulator-arrow"></div></div></div></div><div class="tabulator-col-resize-handle"></div><div class="tabulator-col-resize-handle prev"></div></div><div class="tabulator-col tabulator-sortable" role="columnheader" aria-sort="none" tabulator-field="startAt" title="" style="min-width: 40px; width: 182px; height: 32px;"><div class="tabulator-col-content"><div class="tabulator-col-title-holder"><div class="tabulator-col-title" style="text-align: center;">Start Time</div><div class="tabulator-col-sorter"><div class="tabulator-arrow"></div></div></div></div><div class="tabulator-col-resize-handle"></div><div class="tabulator-col-resize-handle prev"></div></div><div class="tabulator-col tabulator-sortable" role="columnheader" aria-sort="none" tabulator-field="endAt" title="" style="min-width: 40px; width: 182px; height: 32px;"><div class="tabulator-col-content"><div class="tabulator-col-title-holder"><div class="tabulator-col-title" style="text-align: center;">End Time</div><div class="tabulator-col-sorter"><div class="tabulator-arrow"></div></div></div></div><div class="tabulator-col-resize-handle"></div><div class="tabulator-col-resize-handle prev"></div></div></div><div class="tabulator-frozen-rows-holder"></div></div><div class="tabulator-tableholder" tabindex="0" role="rowgroup" style="min-height: calc(100% - 69px); height: calc(100% - 69px); max-height: calc(100% - 69px);"><div class="tabulator-table" role="rowgroup" style="padding-top: 0px; padding-bottom: 0px;"><div class="tabulator-row tabulator-selectable tabulator-row-odd" role="row" style="padding-left: 0px; color: grey; cursor: not-allowed;"><div class="tabulator-cell" role="gridcell" tabulator-field="name" title="" style="width: 182px; text-align: center; height: 32px;">Cyberspace Tales Of The Past</div><div class="tabulator-cell" role="gridcell" tabulator-field="displayName" title="" style="width: 182px; text-align: center; height: 32px;">Nibera</div><div class="tabulator-cell" role="gridcell" tabulator-field="startAt" title="" style="width: 182px; text-align: center; height: 32px;">31/12/21 07:00 PM</div><div class="tabulator-cell" role="gridcell" tabulator-field="endAt" title="" style="width: 182px; text-align: center; height: 32px;">01/01/22 07:00 PM</div></div><div class="tabulator-row tabulator-selectable tabulator-row-even" role="row" style="padding-left: 0px; color: grey; cursor: not-allowed;"><div class="tabulator-cell" role="gridcell" tabulator-field="name" title="" style="width: 182px; text-align: center; height: 32px;">#CyberSquadUniverse</div><div class="tabulator-cell" role="gridcell" tabulator-field="displayName" title="" style="width: 182px; text-align: center; height: 32px;">Kaan Asici</div><div class="tabulator-cell" role="gridcell" tabulator-field="startAt" title="" style="width: 182px; text-align: center; height: 32px;">31/12/21 07:00 AM</div><div class="tabulator-cell" role="gridcell" tabulator-field="endAt" title="" style="width: 182px; text-align: center; height: 32px;">01/01/22 07:00 AM</div></div><div class="tabulator-row tabulator-selectable tabulator-row-odd" role="row" style="padding-left: 0px; color: grey; cursor: not-allowed;"><div class="tabulator-cell" role="gridcell" tabulator-field="name" title="" style="width: 182px; text-align: center; height: 32px;">Satori Moon</div><div class="tabulator-cell" role="gridcell" tabulator-field="displayName" title="" style="width: 182px; text-align: center; height: 32px;">Fifi Rong</div><div class="tabulator-cell" role="gridcell" tabulator-field="startAt" title="" style="width: 182px; text-align: center; height: 32px;">30/12/21 07:00 PM</div><div class="tabulator-cell" role="gridcell" tabulator-field="endAt" title="" style="width: 182px; text-align: center; height: 32px;">31/12/21 07:00 PM</div></div><div class="tabulator-row tabulator-selectable tabulator-row-even" role="row" style="padding-left: 0px; color: grey; cursor: not-allowed;"><div class="tabulator-cell" role="gridcell" tabulator-field="name" title="" style="width: 182px; text-align: center; height: 32px;">Spending Time In My Head</div><div class="tabulator-cell" role="gridcell" tabulator-field="displayName" title="" style="width: 182px; text-align: center; height: 32px;">morysetta</div><div class="tabulator-cell" role="gridcell" tabulator-field="startAt" title="" style="width: 182px; text-align: center; height: 32px;">29/12/21 07:00 PM</div><div class="tabulator-cell" role="gridcell" tabulator-field="endAt" title="" style="width: 182px; text-align: center; height: 32px;">30/12/21 07:00 PM</div></div><div class="tabulator-row tabulator-selectable tabulator-row-odd" role="row" style="padding-left: 0px; color: grey; cursor: not-allowed;"><div class="tabulator-cell" role="gridcell" tabulator-field="name" title="" style="width: 182px; text-align: center; height: 32px;">Whale Life</div><div class="tabulator-cell" role="gridcell" tabulator-field="displayName" title="" style="width: 182px; text-align: center; height: 32px;">Barbara Redekop</div><div class="tabulator-cell" role="gridcell" tabulator-field="startAt" title="" style="width: 182px; text-align: center; height: 32px;">29/12/21 07:00 AM</div><div class="tabulator-cell" role="gridcell" tabulator-field="endAt" title="" style="width: 182px; text-align: center; height: 32px;">30/12/21 07:00 AM</div></div><div class="tabulator-row tabulator-selectable tabulator-row-even" role="row" style="padding-left: 0px;"><div class="tabulator-cell" role="gridcell" tabulator-field="name" title="" style="width: 182px; text-align: center; height: 32px;">A Stars Phantasma</div><div class="tabulator-cell" role="gridcell" tabulator-field="displayName" title="" style="width: 182px; text-align: center; height: 32px;">Rosco Adrian</div><div class="tabulator-cell" role="gridcell" tabulator-field="startAt" title="" style="width: 182px; text-align: center; height: 32px;">28/12/21 07:00 PM</div><div class="tabulator-cell" role="gridcell" tabulator-field="endAt" title="" style="width: 182px; text-align: center; height: 32px;">29/12/21 07:00 PM</div></div><div class="tabulator-row tabulator-selectable tabulator-row-odd" role="row" style="padding-left: 0px;"><div class="tabulator-cell" role="gridcell" tabulator-field="name" title="" style="width: 182px; text-align: center; height: 32px;">76ers Legacy 04: Buckets</div><div class="tabulator-cell" role="gridcell" tabulator-field="displayName" title="" style="width: 182px; text-align: center; height: 32px;">Philadelphia 76ers</div><div class="tabulator-cell" role="gridcell" tabulator-field="startAt" title="" style="width: 182px; text-align: center; height: 32px;">23/12/21 07:00 PM</div><div class="tabulator-cell" role="gridcell" tabulator-field="endAt" title="" style="width: 182px; text-align: center; height: 32px;">25/12/21 07:00 PM</div></div><div class="tabulator-row tabulator-selectable tabulator-row-even" role="row" style="padding-left: 0px;"><div class="tabulator-cell" role="gridcell" tabulator-field="name" title="" style="width: 182px; text-align: center; height: 32px;">Welcome to Cybertown</div><div class="tabulator-cell" role="gridcell" tabulator-field="displayName" title="" style="width: 182px; text-align: center; height: 32px;">Jun</div><div class="tabulator-cell" role="gridcell" tabulator-field="startAt" title="" style="width: 182px; text-align: center; height: 32px;">23/12/21 07:00 AM</div><div class="tabulator-cell" role="gridcell" tabulator-field="endAt" title="" style="width: 182px; text-align: center; height: 32px;">24/12/21 07:00 AM</div></div><div class="tabulator-row tabulator-selectable tabulator-row-odd" role="row" style="padding-left: 0px;"><div class="tabulator-cell" role="gridcell" tabulator-field="name" title="" style="width: 182px; text-align: center; height: 32px;">CryptoAngels Collection 1</div><div class="tabulator-cell" role="gridcell" tabulator-field="displayName" title="" style="width: 182px; text-align: center; height: 32px;">CryptoAngels</div><div class="tabulator-cell" role="gridcell" tabulator-field="startAt" title="" style="width: 182px; text-align: center; height: 32px;">22/12/21 07:00 PM</div><div class="tabulator-cell" role="gridcell" tabulator-field="endAt" title="" style="width: 182px; text-align: center; height: 32px;">23/12/21 07:00 PM</div></div><div class="tabulator-row tabulator-selectable tabulator-row-even" role="row" style="padding-left: 0px;"><div class="tabulator-cell" role="gridcell" tabulator-field="name" title="" style="width: 182px; text-align: center; height: 32px;">Cryptmas Bingo</div><div class="tabulator-cell" role="gridcell" tabulator-field="displayName" title="" style="width: 182px; text-align: center; height: 32px;">Crypto.com</div><div class="tabulator-cell" role="gridcell" tabulator-field="startAt" title="" style="width: 182px; text-align: center; height: 32px;">22/12/21 06:00 PM</div><div class="tabulator-cell" role="gridcell" tabulator-field="endAt" title="" style="width: 182px; text-align: center; height: 32px;">23/12/21 06:00 PM</div></div></div></div><div class="tabulator-footer"><input type="text" onkeyup="filterMenuTable(this)" placeholder="Search..."><span class="tabulator-paginator"><button class="tabulator-page" type="button" role="button" aria-label="First Page" title="First Page" data-page="first" disabled="">First</button><button class="tabulator-page" type="button" role="button" aria-label="Prev Page" title="Prev Page" data-page="prev" disabled="">Prev</button><span class="tabulator-pages"><button class="tabulator-page active" type="button" role="button" aria-label="Show Page 1" title="Show Page 1" data-page="1">1</button><button class="tabulator-page" type="button" role="button" aria-label="Show Page 2" title="Show Page 2" data-page="2">2</button><button class="tabulator-page" type="button" role="button" aria-label="Show Page 3" title="Show Page 3" data-page="3">3</button><button class="tabulator-page" type="button" role="button" aria-label="Show Page 4" title="Show Page 4" data-page="4">4</button><button class="tabulator-page" type="button" role="button" aria-label="Show Page 5" title="Show Page 5" data-page="5">5</button></span><button class="tabulator-page" type="button" role="button" aria-label="Next Page" title="Next Page" data-page="next">Next</button><button class="tabulator-page" type="button" role="button" aria-label="Last Page" title="Last Page" data-page="last">Last</button></span></div></div></div></div>
+<div id="output"></div>
+<div id="footer"><div class="box"><i class="icon-twitter" onclick="openURL('https://twitter.com/_swordfish6975')"></i> <i class="icon-twitter" onclick="openURL('https://twitter.com/sexysenoriita')"></i>
+Made with <i class="icon-heart"></i> by <a target="_blank" href="https://www.reddit.com/user/swordfish6975">/u/swordfish6975</a>
+cro1mv5utt5tqc8y5sg0mn0qlpzn2nfylp44l6a6h9
+swordfish6975$paystring.crypto.com
+Rocket icon made by <a target="_blank" href="https://www.flaticon.com/authors/dinosoftlabs" title="DinosoftLabs">DinosoftLabs</a>
+Hash and Whale icon made by <a target="_blank" href="https://www.flaticon.com/authors/good-ware" title="Good Ware">Good Ware</a>
+</div>
+
+<script type="text/javascript">
+var sc_project=12603501;
+var sc_invisible=1;
+var sc_security="62c10b4a";
+</script>
+<script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async=""></script>
+<noscript><div class="statcounter"><a title="Web Analytics"
+href="https://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="https://c.statcounter.com/12603501/0/62c10b4a/1/"
+alt="Web Analytics"
+referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+
+</div>
+
+
+</body></html>
